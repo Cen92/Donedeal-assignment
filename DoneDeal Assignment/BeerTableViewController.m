@@ -44,7 +44,7 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) { //network activity spinner manager from appDelegate
 
         if(!_beerArray){ //if array is empty
             _beerArray = [[responseObject objectForKey:@"data"]mutableCopy]; // set array to be a copy of data

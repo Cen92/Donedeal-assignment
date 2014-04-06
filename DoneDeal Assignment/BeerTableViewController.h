@@ -10,5 +10,4 @@
 
 @interface BeerTableViewController : UITableViewController
 
-//@property (strong, nonatomic) NSMutableArray *beerArray;
 @end
